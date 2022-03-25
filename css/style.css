@@ -1,3 +1,29 @@
 .hidden {
   display: none;
 }
+
+.clock {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+  font-size: 10rem;
+}
+
+.login-form {
+  display: flex;
+  padding: 2rem, 1rem;
+  align-items: center;
+}
+
+.D-day {
+  display: flex;
+}
+
+.greeting {
+  display: flex;
+}
+
+.school_info {
+  display: flex;
+}

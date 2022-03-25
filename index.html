@@ -6,8 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+        $.datepicker.setDefaults({
+          showOn : 'button',  
+          dateFormat: 'yy-mm-dd',
+          prevText: '이전 달',
+          nextText: '다음 달',
+          monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+          monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+          dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+          dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+          dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+          showMonthAfterYear: true,
+          yearSuffix: '년'
+        });
+
+        $(function () {
+          $("#datepicker").datepicker()
+        });
+
+      </script>
   </head>
   <body>
+
+    <p>종강 날짜: <input type="text" id="datepicker"></p>
+
     <form class="hidden" id="login-form">
       <input
         required
@@ -17,8 +44,8 @@
       />
       <button>Log In</button>
     </form>
-    <h1> 앞으로 까지 </h1>
-    <h2 id="D-day">00 00 00 </h2>
+    <h1> 까지 </h1>
+    <h2 id="D-day">00일 00시간 00분 00초 </h2>
 
     <h1 class="hidden" id="greeting"></h1>
     <h2 id="clock">00:00:00</h2>
@@ -34,6 +61,16 @@
         <span></span>
         <span></span>
     </div>
+
+    <div class ="school_info">
+      <a class="portal" href="https://portal.jnu.ac.kr/Pages/Default.aspx">
+        <i class="fa-solid fa-school"></i>
+      </a>
+      <a class="homepage" href="https://www.jnu.ac.kr/jnumain.aspx">
+        <i class="fa-solid fa-school"></i>
+      </a>
+    </div>
+
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
